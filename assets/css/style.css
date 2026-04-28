@@ -162,6 +162,7 @@ form label {
 
 form input[type="text"],
 form input[type="email"],
+form input[type="tel"],
 form select,
 form textarea {
   width: 100%;
@@ -175,6 +176,7 @@ form textarea {
 }
 
 form input:focus,
+form input[type="tel"]:focus,
 form select:focus,
 form textarea:focus {
   outline: none;
