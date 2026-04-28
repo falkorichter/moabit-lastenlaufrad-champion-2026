@@ -171,7 +171,7 @@
 
       <dt>Ich habe noch eine Frage …</dt>
       <dd>
-        Schreib uns einfach: <a href="mailto:moabit-2026@pimpmycargo.bike">moabit-2026@pimpmycargo.bike</a>
+        Schreib uns einfach: <a href="#" class="obf-mail" data-em="bW9hYml0LTIwMjZAcGltcG15Y2FyZ28uYmlrZQ==">moabit-2026 [at] pimpmycargo.bike</a>
       </dd>
 
     </dl>
@@ -204,9 +204,16 @@
       <p>
         Moabiter Lastenlaufrad Kiez-WM 2026 &mdash;
         organisiert von <a href="https://www.pimpmycargo.bike" target="_blank" rel="noopener">PimpMyCargo</a>
-        &mdash; Fragen? <a href="mailto:moabit-2026@pimpmycargo.bike">moabit-2026@pimpmycargo.bike</a>
+        &mdash; Fragen? <a href="#" class="obf-mail" data-em="bW9hYml0LTIwMjZAcGltcG15Y2FyZ28uYmlrZQ==">moabit-2026 [at] pimpmycargo.bike</a>
       </p>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('.obf-mail').forEach(function(el) {
+      var addr = atob(el.dataset.em);
+      el.href = 'mailto:' + addr;
+      el.textContent = addr;
+    });
+  </script>
 </body>
 </html>
