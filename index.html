@@ -1,0 +1,146 @@
+---
+layout: default
+title: Moabiter Lastenlaufrad Kiez-WM 2026
+---
+
+<!-- Hero -->
+<header class="hero">
+  <img
+    src="{{ '/assets/images/logo.png' | relative_url }}"
+    alt="SuperMegaMighty Jr. – Kinderzeichnung eines Lastenrads"
+    class="hero-logo"
+  >
+  <h1>Moabiter Lastenlaufrad<br>Kiez-Weltmeisterschaft 2026</h1>
+  <p class="subtitle">Wer ist die schnellste Fracht im Kiez?</p>
+</header>
+
+<!-- Info band -->
+<div class="info-band">
+  <div class="info-item">
+    <span class="icon">📅</span>
+    <span>9. März 2026 &mdash; 16:00 Uhr</span>
+  </div>
+  <div class="info-item">
+    <span class="icon">📍</span>
+    <span>
+      <a href="https://www.instagram.com/zazza_moabit/" target="_blank" rel="noopener">
+        Zazza Frühlingsfest, Moabit
+      </a>
+    </span>
+  </div>
+  <div class="info-item">
+    <span class="icon">🏆</span>
+    <span>3 Klassen</span>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- About -->
+  <section>
+    <h2>Was ist die Kiez-WM?</h2>
+    <p>
+      Lastenräder sind das Rückgrat des Moabiter Kiezlebens – sie transportieren Kinder, Einkäufe,
+      Pizzen und gelegentlich Sofas. Höchste Zeit, die schnellsten Fahrer:innen offiziell zu küren!
+      Beim <strong>Zazza Frühlingsfest</strong> messen sich Groß und Klein auf Lastenrädern.
+      Mitmachen ist Pflicht. Siegen ist schön. Spaß haben ist obligatorisch.
+    </p>
+  </section>
+
+  <!-- Classes -->
+  <section>
+    <h2>Klassen</h2>
+    <div class="classes-grid">
+      <div class="class-card card-kiga">
+        <div class="class-label">Klasse 1</div>
+        <div class="class-name">Kindergarten</div>
+        <div class="class-sub">auch bekannt als: „Die Pros"</div>
+      </div>
+      <div class="class-card card-gs">
+        <div class="class-label">Klasse 2</div>
+        <div class="class-name">Grundschule</div>
+        <div class="class-sub">auch bekannt als: „Lauf-Boomer"</div>
+      </div>
+      <div class="class-card card-adult">
+        <div class="class-label">Klasse 3</div>
+        <div class="class-name">Erwachsene</div>
+        <div class="class-sub">auch bekannt als: „Oldies"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration -->
+  <section>
+    <div class="reg-section">
+      <h2>Anmeldung</h2>
+      <p class="note">
+        Meldet euch hier an – wir schicken euch alle Infos zum Rennablauf.
+        Startnummern gibt es am Tag vor Ort.
+      </p>
+
+      <form
+        action="https://formsubmit.co/c87f0fa3e6bfb60ee8495a8095897f94"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Anmeldung Moabiter Lastenlaufrad Kiez-WM 2026">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_autoresponse" value="Danke für deine Anmeldung zur Moabiter Lastenlaufrad Kiez-WM! Wir melden uns mit allen Details. Bis zum 9. März!">
+        <input type="hidden" name="_next" value="">
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Dein Name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+        </div>
+
+        <div class="field">
+          <label for="klasse">Klasse</label>
+          <select id="klasse" name="klasse" required>
+            <option value="" disabled selected>Klasse wählen …</option>
+            <option value="Kindergarten (Pro)">Kindergarten – Die Pros</option>
+            <option value="Grundschule (Lauf-Boomer)">Grundschule – Lauf-Boomer</option>
+            <option value="Erwachsene (Oldie)">Erwachsene – Oldies</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="lastenrad">Lastenrad-Modell (optional)</label>
+          <input type="text" id="lastenrad" name="lastenrad" placeholder="z.B. Babboe, Riese &amp; Müller, selbst gebaut …">
+        </div>
+
+        <div class="field">
+          <label for="message">Fragen oder Anmerkungen</label>
+          <textarea id="message" name="message" placeholder="Fragen, Wünsche, spezielle Frachten?" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Jetzt anmelden 🚲</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section>
+    <h2>Neuigkeiten</h2>
+    {% assign posts = site.posts %}
+    {% if posts.size > 0 %}
+      <ul class="blog-list">
+        {% for post in posts %}
+        <li>
+          <div class="post-date">{{ post.date | date: "%d. %B %Y" }}</div>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p style="color: var(--muted);">Neuigkeiten folgen in Kürze – schaut bald wieder vorbei!</p>
+    {% endif %}
+  </section>
+
+</main>

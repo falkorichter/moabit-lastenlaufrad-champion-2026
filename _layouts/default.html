@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+</head>
+<body>
+  {{ content }}
+
+  <footer>
+    <div class="container">
+      <p>
+        Moabiter Lastenlaufrad Kiez-WM 2026 &mdash;
+        organisiert von <a href="https://www.pimpmycargo.bike" target="_blank" rel="noopener">PimpMyCargo</a>
+        &mdash; Fragen? <a href="mailto:moabit-2026@pimpmycargo.bike">moabit-2026@pimpmycargo.bike</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
