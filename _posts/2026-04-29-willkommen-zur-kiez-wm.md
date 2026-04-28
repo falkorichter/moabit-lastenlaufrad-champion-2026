@@ -3,7 +3,7 @@ title: "Willkommen zur ersten Moabiter Lastenlaufrad Kiez-WM!"
 date: 2026-04-29
 ---
 
-Es ist offiziell: Am **9. März 2026** findet auf dem **Zazza Frühlingsfest** in Moabit die erste Moabiter Lastenlaufrad Kiez-Weltmeisterschaft statt!
+Es ist offiziell: Am **9. Mai 2026** findet auf dem **Zazza Frühlingsfest** in Moabit die erste Moabiter Lastenlaufrad Kiez-Weltmeisterschaft statt!
 
 Wir freuen uns auf Teilnehmer:innen aus allen Altersklassen – von den kleinen Pros aus dem Kindergarten bis zu den erfahrenen Oldies. Lastenräder jeder Art und Größe sind willkommen.
 

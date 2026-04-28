@@ -1,5 +1,5 @@
 title: Moabiter Lastenlaufrad Kiez-WM 2026
-description: Die erste Moabiter Lastenlaufrad Kiez-Weltmeisterschaft – 9. März 2026
+description: Die erste Moabiter Lastenlaufrad Kiez-Weltmeisterschaft – 9. Mai 2026
 baseurl: ""
 url: ""
 lang: de
@@ -15,6 +15,9 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+include:
+  - assets/kiez-wm-2026.ics
 
 exclude:
   - Gemfile
