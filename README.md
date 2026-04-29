@@ -1,5 +1,7 @@
 # Moabiter Lastenlaufrad Kiez-Weltmeisterschaft 2026
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 Website for the first Moabiter Lastenlaufrad Kiez-WM, hosted at **[moabit.pimpmycargo.bike](https://moabit.pimpmycargo.bike)**.
 
 ## Event details
@@ -88,3 +90,7 @@ Inhalt hier …
 ```
 
 The post will appear automatically in the "Neuigkeiten" section on the home page.
+
+## License
+
+[Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) — free to share and adapt, but not for commercial use. Attribution required.
