@@ -202,6 +202,14 @@ form textarea { resize: vertical; }
 .btn-submit:hover  { background: #d45c38; }
 .btn-submit:active { transform: scale(.97); }
 
+.btn-logo {
+  height: 1.4em;
+  width: auto;
+  vertical-align: middle;
+  margin-right: .5em;
+  filter: brightness(0) invert(1);
+}
+
 /* ── FAQ ── */
 .faq-list { list-style: none; }
 
