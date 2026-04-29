@@ -28,6 +28,7 @@ Official race bike: [Super Mighty Junior – Cargo-Laufrad](https://super-bicycl
 - Hosted on **GitHub Pages** with custom domain `moabit.pimpmycargo.bike`
 - DNS: CNAME at [united-domains.de](https://www.united-domains.de/) → `falkorichter.github.io`
 - Registration form via [formsubmit.co](https://formsubmit.co) (no backend required); redirects to `/?danke=1` on success
+- Submissions archive available via the [formsubmit API](https://formsubmit.co/documentation) — free, max 5 requests/day, data retained for 30 days
 - Post-submission success modal: JS detects `?danke=1`, shows popup, cleans URL with `history.replaceState`
 - Calendar download: `assets/kiez-wm-2026.ics` (Europe/Berlin timezone, MESZ/CEST)
 - Email obfuscation: base64 + JS decode (`atob`) at runtime to deter scrapers — no plain `@` in HTML source
