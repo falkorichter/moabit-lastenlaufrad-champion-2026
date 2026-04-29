@@ -16,7 +16,7 @@ Processed outputs live in `../assets/images/`.
 | ![](size_pro.png) | `size_pro.png` | [Gemini](https://gemini.google.com) — Kindergarten class size illustration |
 | ![](size_boomer.png) | `size_boomer.png` | [Gemini](https://gemini.google.com) — Grundschule class size illustration |
 | ![](size_oldies.png) | `size_oldies.png` | [Gemini](https://gemini.google.com) — Erwachsene class size illustration |
-| ![](size%20comparison.png) | `size comparison.png` | ? |
+| ![](size%20comparison.png) | `size comparison.png` | [Gemini](https://gemini.google.com) — all three class sizes side by side |
 
 ### Processed files (white → transparent, threshold to pure black)
 
