@@ -97,6 +97,35 @@ body {
 }
 .ics-link:hover { background: rgba(255,255,255,.35); }
 
+/* ── Jump nav ── */
+.jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .25rem .5rem;
+  padding: .6rem 1.25rem;
+  background: #fff;
+  border-bottom: 2px solid #d9ede9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.jump-nav a {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--teal-dk);
+  text-decoration: none;
+  padding: .25rem .6rem;
+  border-radius: 20px;
+  transition: background .15s, color .15s;
+}
+
+.jump-nav a:hover {
+  background: var(--teal);
+  color: #fff;
+}
+
 /* ── Section headings ── */
 section { padding: 2.5rem 0; }
 
