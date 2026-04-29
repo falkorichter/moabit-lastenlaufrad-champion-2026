@@ -235,6 +235,28 @@ form textarea:focus {
 
 form textarea { resize: vertical; }
 
+.field-consent { margin-bottom: .75rem; }
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  font-size: .78rem;
+  color: var(--muted);
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.consent-label input[type="checkbox"] {
+  margin-top: .15em;
+  flex-shrink: 0;
+  width: auto;
+  accent-color: var(--teal);
+}
+
+.consent-label a { color: var(--teal); }
+
 .btn-submit {
   display: inline-block;
   padding: .8rem 2.2rem;
