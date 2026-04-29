@@ -27,9 +27,11 @@ Official race bike: [Super Mighty Junior – Cargo-Laufrad](https://super-bicycl
 - [Jekyll](https://jekyllrb.com/) 4.x static site generator
 - Hosted on **GitHub Pages** with custom domain `moabit.pimpmycargo.bike`
 - DNS: CNAME at [united-domains.de](https://www.united-domains.de/) → `falkorichter.github.io`
-- Registration form via [formsubmit.co](https://formsubmit.co) (no backend required)
-- Calendar download: `assets/kiez-wm-2026.ics` (Europe/Berlin timezone)
-- Email obfuscation: base64 + JS decode to deter scrapers
+- Registration form via [formsubmit.co](https://formsubmit.co) (no backend required); redirects to `/?danke=1` on success
+- Post-submission success modal: JS detects `?danke=1`, shows popup, cleans URL with `history.replaceState`
+- Calendar download: `assets/kiez-wm-2026.ics` (Europe/Berlin timezone, MESZ/CEST)
+- Email obfuscation: base64 + JS decode (`atob`) at runtime to deter scrapers — no plain `@` in HTML source
+- Phone field uses `type="tel"` for native numeric keyboard on mobile
 
 ## Local development
 
@@ -47,14 +49,14 @@ bundle exec jekyll serve
 moabit-2026/
 ├── _config.yml               # Site config, title, description
 ├── _layouts/
-│   ├── default.html          # Base layout with nav, footer, email obfuscation script
+│   ├── default.html          # Base layout with footer, email obfuscation + success modal JS
 │   └── post.html             # Blog post layout
 ├── _posts/                   # Blog posts (YYYY-MM-DD-title.md)
 ├── assets/
 │   ├── css/style.css         # All styles — no framework
 │   ├── images/logo.png       # Kid's crayon Lastenrad drawing
 │   └── kiez-wm-2026.ics     # Downloadable calendar invite
-├── index.html                # Main page (hero, info band, classes, form, FAQ, blog)
+├── index.html                # Main page (hero, info band, classes, form, FAQ, blog, success modal)
 ├── CNAME                     # Custom domain for GitHub Pages
 └── Gemfile                   # Jekyll + webrick
 ```

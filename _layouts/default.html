@@ -26,6 +26,24 @@
       el.href = 'mailto:' + addr;
       el.textContent = addr;
     });
+
+    (function() {
+      if (new URLSearchParams(window.location.search).get('danke') === '1') {
+        var modal = document.getElementById('danke-modal');
+        if (modal) {
+          modal.hidden = false;
+          history.replaceState(null, '', window.location.pathname);
+        }
+      }
+    })();
+
+    function closeDanke() {
+      document.getElementById('danke-modal').hidden = true;
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeDanke();
+    });
   </script>
 </body>
 </html>

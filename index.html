@@ -91,7 +91,7 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
         <input type="hidden" name="_subject" value="Anmeldung Moabiter Lastenlaufrad Kiez-WM 2026">
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_autoresponse" value="Danke für deine Anmeldung zur Moabiter Lastenlaufrad Kiez-WM! Wir melden uns mit allen Details. Bis zum 9. Mai!">
-        <input type="hidden" name="_next" value="">
+        <input type="hidden" name="_next" value="https://moabit.pimpmycargo.bike/?danke=1">
 
         <div class="field">
           <label for="name">Name</label>
@@ -200,3 +200,16 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
   </section>
 
 </main>
+
+<!-- Success modal -->
+<div id="danke-modal" class="modal-overlay" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="danke-title">
+    <div class="modal-icon">🎉</div>
+    <h2 id="danke-title">Anmeldung erhalten!</h2>
+    <p>
+      Super, du bist dabei! Wir melden uns vor dem <strong>9. Mai</strong> mit allen Details zum Rennablauf.
+      Bis dann – und viel Speed!
+    </p>
+    <button class="btn-submit" onclick="closeDanke()">Alles klar!</button>
+  </div>
+</div>
