@@ -99,6 +99,12 @@ utm_content=<placement>   ← about-section | faq | ...
 utm_term=lastenlaufrad
 ```
 
+## Social preview
+
+`_logo/social-preview.html` shows how `og-preview.jpg` renders on Facebook/LinkedIn, Twitter/X, and WhatsApp/iMessage. Open it directly in a browser (no server needed).
+
+**Keep it up to date**: whenever `assets/images/og-preview.jpg` is replaced or the OG title/description changes, update `_logo/social-preview.html` accordingly (image path and text strings in `.fb-title`, `.tw-title`, `.wa-title`, and their description elements).
+
 ## Adding a blog post
 
 Create `_posts/YYYY-MM-DD-slug.md` with:
