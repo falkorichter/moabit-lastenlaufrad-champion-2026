@@ -122,7 +122,27 @@ h2 {
   text-align: center;
   color: #fff;
   font-weight: 700;
+  position: relative;
+  overflow: hidden;
 }
+
+.class-card > * { position: relative; z-index: 1; }
+
+.class-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  filter: invert(1);
+  opacity: .18;
+  pointer-events: none;
+}
+
+.card-kiga::after  { background-image: url('/assets/images/size_pro_transparent.png'); }
+.card-gs::after    { background-image: url('/assets/images/size_boomer_transparent.png'); }
+.card-adult::after { background-image: url('/assets/images/size_oldies_transparent.png'); }
 
 .class-card .class-label {
   font-size: .75rem;
