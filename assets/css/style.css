@@ -400,6 +400,19 @@ footer {
 
 footer a { color: var(--teal); }
 
+.imprint {
+  margin-top: .9rem;
+  padding-top: .75rem;
+  border-top: 1px solid #e0eded;
+  font-size: .73rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.imprint p { margin-bottom: .35rem; }
+.imprint p:last-child { margin-bottom: 0; }
+.imprint a { color: #888; text-decoration: underline; }
+
 /* ── Utility ── */
 .visually-hidden {
   position: absolute; width: 1px; height: 1px;
