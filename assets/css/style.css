@@ -124,6 +124,7 @@ h2 {
   font-weight: 700;
   position: relative;
   overflow: hidden;
+  min-height: 260px;
 }
 
 .class-card > * { position: relative; z-index: 1; }
