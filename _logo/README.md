@@ -34,6 +34,27 @@ Copy the relevant ones to `../assets/images/` to use them on the site.
 
 ## Assets
 
+### Header / OG preview images
+
+| Preview | File | Notes |
+|---|---|---|
+| <img src="header_with_banana_addedGemini_Generated_Image_oe7jxnoe7jxnoe7j_social_media.png" width="80"> | `header_with_banana_addedGemini_Generated_Image_oe7jxnoe7jxnoe7j_social_media.png` | **Active OG source** — [Gemini](https://gemini.google.com) base, banana repositioned in [Vinilo](https://apps.apple.com/de/app/vinilo-crafting/id1554518531) to stay in frame after crop (2252×1888 PNG) |
+| <img src="header_with_banana_addedGemini_Generated_Image_oe7jxnoe7jxnoe7j_original.png" width="80"> | `header_with_banana_addedGemini_Generated_Image_oe7jxnoe7jxnoe7j_original.png` | Original before banana repositioning |
+| <img src="header_with_banana_Gemini_Generated_Image_eiydgmeiydgmeiyd.png" width="80"> | `header_with_banana_Gemini_Generated_Image_eiydgmeiydgmeiyd.png` | Earlier Gemini variant (superseded) |
+
+To regenerate `../assets/images/og-preview.jpg` from the active source (1200×630 center-crop, scale 0.533×, top offset 188 px):
+
+```python
+from PIL import Image
+src = Image.open("header_with_banana_addedGemini_Generated_Image_oe7jxnoe7jxnoe7j_social_media.png").convert("RGB")
+tw, th = 1200, 630
+scale = max(tw / src.width, th / src.height)
+nw, nh = round(src.width * scale), round(src.height * scale)
+resized = src.resize((nw, nh), Image.LANCZOS)
+left = (nw - tw) // 2; top = (nh - th) // 2
+resized.crop((left, top, left + tw, top + th)).save("../assets/images/og-preview.jpg", "JPEG", quality=90, optimize=True)
+```
+
 ### Original files
 
 | Preview | File | Origin |
