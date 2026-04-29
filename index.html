@@ -5,11 +5,22 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
 
 <!-- Hero -->
 <header class="hero">
-  <img
-    src="{{ '/assets/images/logo.png' | relative_url }}"
-    alt="SuperMegaMighty Jr. – Kinderzeichnung eines Lastenrads"
-    class="hero-logo"
-  >
+  <picture>
+    <source type="image/webp"
+      srcset="{{ '/assets/images/logo-420w.webp' | relative_url }} 420w,
+              {{ '/assets/images/logo-840w.webp' | relative_url }} 840w,
+              {{ '/assets/images/logo-1260w.webp' | relative_url }} 1260w"
+      sizes="min(92vw, 420px)">
+    <img
+      src="{{ '/assets/images/logo-420w.png' | relative_url }}"
+      srcset="{{ '/assets/images/logo-420w.png' | relative_url }} 420w,
+              {{ '/assets/images/logo-840w.png' | relative_url }} 840w,
+              {{ '/assets/images/logo-1260w.png' | relative_url }} 1260w"
+      sizes="min(92vw, 420px)"
+      alt="SuperMegaMighty Jr. – Kinderzeichnung eines Lastenrads"
+      class="hero-logo"
+    >
+  </picture>
   <h1>Moabiter Lastenlaufrad<br>Kiez-Weltmeisterschaft 2026</h1>
   <p class="subtitle">Wer ist die schnellste Fracht im Kiez?</p>
 </header>
@@ -51,8 +62,8 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
     <p>
       Lastenräder sind das Rückgrat des Moabiter Kiezlebens – sie transportieren Kinder, Einkäufe,
       Pizzen und gelegentlich Sofas. Höchste Zeit, die schnellsten Fahrer:innen offiziell zu küren!
-      Beim <strong>Zazza Frühlingsfest</strong> messen sich Groß und Klein auf Lastenrädern.
-      Mitmachen ist Pflicht. Siegen ist schön. Spaß haben ist obligatorisch.
+      Beim <strong>Zazza Frühlingsfest</strong> messen sich Groß und Klein auf Lastenlaufrädern. 
+      Ja, richtig gelesen - wir fahren mit Laufrädern im Long John Style mit Cargo Fläche vor dem Lenker.
     </p>
     <p style="margin-top:1rem;">
       Das offizielle Renngerät der Kiez-WM:
@@ -134,7 +145,7 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
         <div class="field field-consent">
           <label class="consent-label">
             <input type="checkbox" name="datenschutz" value="zugestimmt" required>
-            Ich bin kein Bot und stimme zu, dass meine Daten mit formsubmit.co verschickt werden. Automatische Löschung nach 30 Tagen.
+            Helm nicht vergessen! Ich bin kein Bot und stimme zu, dass meine Daten mit formsubmit.co verschickt werden. Automatische Löschung nach 30 Tagen.
           </label>
         </div>
 
@@ -184,7 +195,7 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
       <dt>Was gewinne ich?</dt>
       <dd>
         Ruhm, Ehre und einen Pokal, der gefühlt schwerer ist als das Lastenrad.
-        Außerdem natürlich den offiziellen Titel „Moabiter Lastenlaufrad-Weltmeister:in 2026".
+        Außerdem natürlich den offiziellen Titel „Moabiter Lastenlaufrad-Weltmeister:in Frühling 2026".
       </dd>
 
       <dt>Ich habe noch eine Frage …</dt>

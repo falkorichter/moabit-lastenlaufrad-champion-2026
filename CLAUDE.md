@@ -1,5 +1,28 @@
 # CLAUDE.md — Moabiter Lastenlaufrad Kiez-WM 2026
 
+## Image optimisation standard
+
+All raster images served on the site must follow this pipeline:
+
+1. **Preserve the original** in `_logo/` before any processing
+2. **Generate 1x / 2x / 3x WebP + PNG** using `_logo/process_logos.py` or equivalent
+   - Hero image (max 420px CSS): 420w, 840w, 1260w
+   - Card backgrounds (max ~240px CSS): 480w (1x), 960w (2x)
+3. **Use `<picture>` + `srcset`** for `<img>` elements:
+   ```html
+   <picture>
+     <source type="image/webp" srcset="img-420w.webp 420w, img-840w.webp 840w" sizes="...">
+     <img src="img-420w.png" srcset="img-420w.png 420w, img-840w.png 840w" sizes="...">
+   </picture>
+   ```
+4. **Use `image-set()`** for CSS background images (WebP first, PNG fallback):
+   ```css
+   background-image: url('img-480w.webp');
+   background-image: image-set(url('img-480w.webp') 1x, url('img-960w.webp') 2x);
+   ```
+5. Never serve the original high-res file directly — it stays in `_logo/` only
+6. Update `_logo/README.md` whenever a new source asset is added
+
 ## Logo assets
 
 When adding or processing logo files in `_logo/`, always update `_logo/README.md`:

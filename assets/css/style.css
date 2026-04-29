@@ -170,9 +170,27 @@ h2 {
   pointer-events: none;
 }
 
-.card-kiga::after  { background-image: url('/assets/images/size_pro_transparent.png'); }
-.card-gs::after    { background-image: url('/assets/images/size_boomer_transparent.png'); }
-.card-adult::after { background-image: url('/assets/images/size_oldies_transparent.png'); }
+.card-kiga::after {
+  background-image: url('/assets/images/size_pro_transparent-480w.webp');
+  background-image: image-set(
+    url('/assets/images/size_pro_transparent-480w.webp') 1x,
+    url('/assets/images/size_pro_transparent-960w.webp') 2x
+  );
+}
+.card-gs::after {
+  background-image: url('/assets/images/size_boomer_transparent-480w.webp');
+  background-image: image-set(
+    url('/assets/images/size_boomer_transparent-480w.webp') 1x,
+    url('/assets/images/size_boomer_transparent-960w.webp') 2x
+  );
+}
+.card-adult::after {
+  background-image: url('/assets/images/size_oldies_transparent-480w.webp');
+  background-image: image-set(
+    url('/assets/images/size_oldies_transparent-480w.webp') 1x,
+    url('/assets/images/size_oldies_transparent-960w.webp') 2x
+  );
+}
 
 .class-card .class-label {
   font-size: .75rem;
