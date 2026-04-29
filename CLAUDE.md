@@ -1,5 +1,12 @@
 # CLAUDE.md — Moabiter Lastenlaufrad Kiez-WM 2026
 
+## Logo assets
+
+When adding or processing logo files in `_logo/`, always update `_logo/README.md`:
+- Add the file to the appropriate table (original or processed) with a preview and origin
+- Note the tool used (Gemini, Vinilo, Super Bicycles, `process_logos.py`, etc.)
+- If the origin is unknown, mark it with `?` until confirmed
+
 ## Build & run
 
 ```bash
