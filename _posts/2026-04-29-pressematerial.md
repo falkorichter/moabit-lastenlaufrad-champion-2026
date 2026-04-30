@@ -1,6 +1,7 @@
 ---
 title: "Pressematerial – Moabiter Lastenlaufrad Kiez-WM 2026"
 date: 2026-04-29
+uuid: 10bebd9e-c74b-49c0-89f7-1ddf5ab18ab4
 social_media_preview_image: /assets/images/og-preview.jpg
 ---
 

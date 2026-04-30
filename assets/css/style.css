@@ -377,6 +377,23 @@ form textarea { resize: vertical; }
 
 .blog-list a:hover { text-decoration: underline; }
 
+.blog-list a.post-read::after {
+  content: '✓';
+  display: inline-block;
+  margin-left: .45rem;
+  font-size: .75rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  line-height: 1.1em;
+  text-align: center;
+  vertical-align: middle;
+  opacity: .75;
+}
+
 .blog-list .post-excerpt {
   font-size: .9rem;
   color: var(--muted);

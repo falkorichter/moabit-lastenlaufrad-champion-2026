@@ -89,6 +89,16 @@
     });
 
     (function() {
+      try {
+        document.querySelectorAll('a[data-post-uuid]').forEach(function(a) {
+          if (localStorage.getItem('post_read_' + a.dataset.postUuid)) {
+            a.classList.add('post-read');
+          }
+        });
+      } catch(e) {}
+    })();
+
+    (function() {
       var icons = {
         'Kindergarten (Pro)':        '/assets/images/size_pro_transparent.png',
         'Grundschule (Lauf-Boomer)': '/assets/images/size_boomer_transparent.png',

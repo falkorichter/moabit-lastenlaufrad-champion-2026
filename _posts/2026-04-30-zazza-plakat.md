@@ -1,6 +1,7 @@
 ---
 title: "Zazza Plakat ist fertig"
 date: 2026-04-30
+uuid: d3954c90-a6b3-4615-a514-b7db2446902a
 social_media_preview_image: /assets/images/og-zazza-plakat.jpg
 ---
 

@@ -235,7 +235,7 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
         {% for post in posts %}
         <li>
           <div class="post-date">{{ post.date | date: "%d. %B %Y" }}</div>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}"{% if post.uuid %} data-post-uuid="{{ post.uuid }}"{% endif %}>{{ post.title }}</a>
           {% if post.excerpt %}
           <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
           {% endif %}
