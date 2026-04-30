@@ -47,6 +47,11 @@ body {
   flex-wrap: nowrap;
 }
 
+.hero-collab picture {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
 .collab-img {
   height: 260px;
   width: auto;
