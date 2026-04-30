@@ -499,8 +499,11 @@ form textarea { resize: vertical; }
   pointer-events: none;
   animation: badge-orbit 5s linear infinite;
 }
-.badge-icon--boomer { animation-delay: -1.67s; }
-.badge-icon--oldies { animation-delay: -3.33s; }
+.badge-icon--2 { animation-delay: -0.83s; }
+.badge-icon--3 { animation-delay: -1.67s; }
+.badge-icon--4 { animation-delay: -2.5s; }
+.badge-icon--5 { animation-delay: -3.33s; }
+.badge-icon--6 { animation-delay: -4.17s; }
 
 @keyframes badge-orbit {
   from { transform: rotate(  0deg) translateY(-46px); }
