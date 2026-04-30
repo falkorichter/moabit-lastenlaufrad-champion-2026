@@ -3,6 +3,8 @@ title: "Pressematerial – Moabiter Lastenlaufrad Kiez-WM 2026"
 date: 2026-04-29
 ---
 
+**[Update 30. April] Zazza Logos hinzugefügt**
+
 Alle Bilder stehen zur freien Nutzung unter [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) bereit – gerne teilen und veröffentlichen!
 
 ---
@@ -118,3 +120,45 @@ Downloads: [Die Pros (PNG, 1,1 MB)](/assets/press/kiez-wm-groesse-pro.png) · [L
 </picture>
 
 [⬇ Original herunterladen (PNG, 3,7 MB)](/assets/press/kiez-wm-groessen-vergleich.png)
+
+---
+
+## Zazza Frühlingsfest – Plakat (A5)
+
+<picture>
+  <source type="image/webp"
+    srcset="/assets/images/zazza-plakat-780w.webp 780w,
+            /assets/images/zazza-plakat-1560w.webp 1560w"
+    sizes="min(92vw, 780px)">
+  <img
+    src="/assets/images/zazza-plakat-780w.jpg"
+    srcset="/assets/images/zazza-plakat-780w.jpg 780w,
+            /assets/images/zazza-plakat-1560w.jpg 1560w"
+    sizes="min(92vw, 780px)"
+    alt="Zazza Frühlingsfest 2026 – A5 Plakat"
+    style="width:100%;height:auto;border-radius:12px;margin-bottom:.5rem;"
+  >
+</picture>
+
+[⬇ JPG herunterladen (2,7 MB)](/assets/press/zazza-a5-fruehlingsfest-2026.jpg) · [⬇ PDF herunterladen (4,4 MB)](/assets/press/zazza-a5-fruehlingsfest-2026.pdf)
+
+---
+
+## Zazza Ankündigung
+
+<picture>
+  <source type="image/webp"
+    srcset="/assets/images/press/zazza-ankuendigung-780w.webp 780w,
+            /assets/images/press/zazza-ankuendigung-1560w.webp 1560w"
+    sizes="min(92vw, 780px)">
+  <img
+    src="/assets/images/press/zazza-ankuendigung-780w.jpg"
+    srcset="/assets/images/press/zazza-ankuendigung-780w.jpg 780w,
+            /assets/images/press/zazza-ankuendigung-1560w.jpg 1560w"
+    sizes="min(92vw, 780px)"
+    alt="Zazza Frühlingsfest 2026 – Ankündigung"
+    style="width:100%;height:auto;border-radius:12px;margin-bottom:.5rem;"
+  >
+</picture>
+
+[⬇ PNG herunterladen (2,6 MB)](/assets/press/zazza-ankuendigung.png) · [⬇ Großes PDF (15,9 MB)](/assets/press/zazza-fruehlingsfest-2026-gross.pdf)
