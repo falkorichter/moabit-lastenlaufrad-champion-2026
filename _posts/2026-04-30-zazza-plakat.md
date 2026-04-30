@@ -1,7 +1,7 @@
 ---
 title: "Zazza Plakat ist fertig"
 date: 2026-04-30
-og_image: /assets/images/og-zazza-plakat.jpg
+social_media_preview_image: /assets/images/og-zazza-plakat.jpg
 ---
 
 Das Plakat fürs Zazza Frühlingsfest ist da!

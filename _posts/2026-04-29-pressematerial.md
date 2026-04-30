@@ -1,7 +1,7 @@
 ---
 title: "Pressematerial – Moabiter Lastenlaufrad Kiez-WM 2026"
 date: 2026-04-29
-og_image: /assets/images/og-preview.jpg
+social_media_preview_image: /assets/images/og-preview.jpg
 ---
 
 **[Update 30. April] Zazza Logos hinzugefügt**
