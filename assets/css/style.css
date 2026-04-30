@@ -414,6 +414,30 @@ form textarea { resize: vertical; }
   to   { transform: scale(1);  opacity: 1; }
 }
 
+/* ── Floating walk-in badge ── */
+.badge-walkin {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 90;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: .8rem;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  padding: .65rem .9rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  transition: transform .15s, box-shadow .15s;
+  max-width: 160px;
+}
+.badge-walkin:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+}
+
 .modal-icon { font-size: 3rem; margin-bottom: .75rem; }
 
 .modal-box h2 {
