@@ -231,6 +231,10 @@ title: Moabiter Lastenlaufrad Kiez-WM 2026
     <h2>Neuigkeiten</h2>
     {% assign posts = site.posts %}
     {% if posts.size > 0 %}
+      <div id="read-progress" class="read-progress" hidden>
+        <div class="read-progress-bar"><div class="read-progress-fill" id="read-progress-fill"></div></div>
+        <span id="read-progress-label"></span>
+      </div>
       <ul class="blog-list">
         {% for post in posts %}
         <li>

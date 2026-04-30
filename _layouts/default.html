@@ -89,13 +89,28 @@
     });
 
     (function() {
-      try {
-        document.querySelectorAll('a[data-post-uuid]').forEach(function(a) {
-          if (localStorage.getItem('post_read_' + a.dataset.postUuid)) {
-            a.classList.add('post-read');
+      function updateReadState() {
+        try {
+          var links = document.querySelectorAll('a[data-post-uuid]');
+          if (!links.length) return;
+          var total = links.length, read = 0;
+          links.forEach(function(a) {
+            var isRead = !!localStorage.getItem('post_read_' + a.dataset.postUuid);
+            a.classList.toggle('post-read', isRead);
+            if (isRead) read++;
+          });
+          var bar   = document.getElementById('read-progress-fill');
+          var label = document.getElementById('read-progress-label');
+          var wrap  = document.getElementById('read-progress');
+          if (bar && label && wrap) {
+            bar.style.width = (read / total * 100) + '%';
+            label.textContent = read + ' von ' + total + ' gelesen';
+            wrap.hidden = false;
           }
-        });
-      } catch(e) {}
+        } catch(e) {}
+      }
+      updateReadState();
+      setInterval(updateReadState, 1000);
     })();
 
     (function() {
