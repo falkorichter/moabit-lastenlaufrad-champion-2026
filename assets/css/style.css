@@ -38,12 +38,35 @@ body {
   border-bottom: 3px solid var(--teal);
 }
 
-.hero-logo {
-  width: min(92vw, 420px);
-  height: auto;
+.hero-collab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.4rem;
+  flex-wrap: nowrap;
+}
+
+.collab-img {
+  height: 260px;
+  width: auto;
   border-radius: var(--radius);
   box-shadow: 0 6px 28px rgba(0,0,0,.12);
-  margin-bottom: 1.4rem;
+  display: block;
+}
+
+.collab-plus {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--teal-dk);
+  flex-shrink: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+@media (max-width: 500px) {
+  .collab-img  { height: 160px; }
+  .collab-plus { font-size: 1.8rem; }
 }
 
 .hero h1 {
