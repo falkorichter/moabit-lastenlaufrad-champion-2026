@@ -506,8 +506,8 @@ form textarea { resize: vertical; }
 .badge-icon--6 { animation-delay: -4.17s; }
 
 @keyframes badge-orbit {
-  from { transform: rotate(  0deg) translateY(-46px); }
-  to   { transform: rotate(-360deg) translateY(-46px); }
+  from { transform: rotate(  0deg) translateY(-46px) scaleX(-1); }
+  to   { transform: rotate(-360deg) translateY(-46px) scaleX(-1); }
 }
 
 @keyframes spin-sun   { to { transform: rotate(360deg); } }
