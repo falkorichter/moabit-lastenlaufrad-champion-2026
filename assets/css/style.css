@@ -481,6 +481,32 @@ form textarea { resize: vertical; }
   z-index: -1;
 }
 
+.badge-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Three class icons orbiting counter to the sun, tumbling as they go */
+.badge-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0,0,0,.4));
+  pointer-events: none;
+  animation: badge-orbit 5s linear infinite;
+}
+.badge-icon--boomer { animation-delay: -1.67s; }
+.badge-icon--oldies { animation-delay: -3.33s; }
+
+@keyframes badge-orbit {
+  from { transform: rotate(  0deg) translateY(-46px); }
+  to   { transform: rotate(-360deg) translateY(-46px); }
+}
+
 @keyframes spin-sun   { to { transform: rotate(360deg); } }
 
 /* orange (Kiga) → purple (Grundschule) → teal-dk (Erwachsene) */
