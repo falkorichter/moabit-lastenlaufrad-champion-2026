@@ -1,6 +1,7 @@
 ---
 title: "Vorbereitung ✅: Warnwesten und Pylone sind am Start"
 date: 2026-04-29
+og_image: /assets/images/og-vorbereitung.jpg
 ---
 
 <picture>
