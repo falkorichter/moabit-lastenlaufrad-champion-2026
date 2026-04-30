@@ -87,6 +87,22 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeDanke();
     });
+
+    (function() {
+      var icons = {
+        'Kindergarten (Pro)':        '/assets/images/size_pro_transparent.png',
+        'Grundschule (Lauf-Boomer)': '/assets/images/size_boomer_transparent.png',
+        'Erwachsene (Oldie)':        '/assets/images/size_oldies_transparent.png'
+      };
+      var sel = document.getElementById('klasse');
+      var img = document.getElementById('klasse-icon');
+      if (!sel || !img) return;
+      sel.addEventListener('change', function() {
+        var src = icons[this.value];
+        if (src) { img.src = src; img.hidden = false; }
+        else      { img.hidden = true; }
+      });
+    })();
   </script>
 </body>
 </html>
