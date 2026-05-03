@@ -218,6 +218,14 @@ Posts are tracked client-side using `localStorage` — no server, no cookies, no
 Object.keys(localStorage).filter(k => k.startsWith('post_read_')).forEach(k => localStorage.removeItem(k))
 ```
 
+**Privacy**: this tracking is intentionally local-only and requires no consent notice:
+- Nothing is transmitted — data never leaves the visitor's browser
+- No server, no analytics service, no third party involved
+- Only a boolean flag per post UUID is stored — no timestamps, no IP, no identity
+- The UUIDs stored are opaque strings with no relation to post content or user identity
+- Visitors can clear their read state at any time via browser settings (Clear site data)
+- DSGVO/GDPR: local storage used purely for UI state (like remembering a toggle) does not require consent under current guidance — no personal data is processed or transmitted
+
 ### Press materials
 
 `_posts/YYYY-MM-DD-pressematerial.md` lists all downloadable assets for journalists and social media. Structure:
