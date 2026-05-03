@@ -96,9 +96,16 @@ The contact address never appears as plain text in HTML. It is stored base64-enc
 
 The decoder in `_layouts/default.html` handles all `.obf-mail` elements automatically.
 
-### Floating walk-in badge
+### Floating walk-in badge (spinning sun)
 
-A fixed orange pill in the bottom-right corner reads "Anmeldung auch vor Ort möglich" and scrolls to `#anmeldung`. Implemented as `.badge-walkin` in `style.css` + an `<a>` tag in `index.html`.
+A fixed badge in the bottom-right corner reads "Anmeldung auch vor Ort möglich" and scrolls to `#anmeldung`. It renders as a spinning sun:
+
+- **Shape**: circular `<a>` with a 12-spike starburst `::before` pseudo-element using `clip-path: polygon(…)`
+- **Spin**: `@keyframes spin-sun` rotates the `::before` continuously (9s); the text stays static
+- **Color cycle**: `@keyframes sun-colors` pans through the three class colors (orange → purple → teal, 6s)
+- **Orbiting icons**: 6 `<img class="badge-icon">` elements inside the `<a>`, positioned and animated with `@keyframes badge-orbit` (`rotate(angle) translateY(-46px) scaleX(-1)`); each is offset by 60° via `animation-delay` so they stay evenly spaced while counter-rotating relative to the spikes
+
+To adapt for a different number of icons, adjust the `animation-delay` steps to `360 / n` degrees and update the `animation-delay` values in `style.css`.
 
 ### Jump navigation
 
@@ -185,6 +192,32 @@ pip install Pillow numpy
 python3 process_logos.py size_pro.png size_boomer.png size_oldies.png
 ```
 
+### Class icon in registration dropdown
+
+When a visitor selects a class in the registration form, the matching silhouette icon appears inside the select field. An `<img id="klasse-icon">` is positioned absolutely inside `.klasse-wrap` (right-aligned, vertically centred). A JS snippet in `_layouts/default.html` listens for `change` on `#klasse` and updates the `src` + visibility of the icon. The icon map lives in the JS object `icons` — update it if class names or image paths change.
+
+### Blog post read tracking
+
+Posts are tracked client-side using `localStorage` — no server, no cookies, no dates stored.
+
+**How it works:**
+
+- Every post must have a `uuid:` field in its front matter (generate with `uuidgen` or any UUID v4 tool):
+  ```yaml
+  uuid: e14f8e29-11c1-453b-b627-aba83baeb793
+  ```
+- `_layouts/post.html` writes `localStorage.setItem('post_read_<uuid>', '1')` when a post is opened
+- `index.html` renders each post link as `<a data-post-uuid="<uuid>">` — only **currently published** posts get this attribute
+- `updateReadState()` in `_layouts/default.html` queries all `a[data-post-uuid]` elements, checks localStorage for each, adds `.post-read` (teal ✓ badge) to read ones, and updates the progress bar
+- The function runs on load **and** via `setInterval(..., 1000)` so navigating back via the browser's back button updates the state within ~1s without a full reload (bfcache compatibility)
+
+**Unpublished posts**: removing a post from `_posts/` removes its link from the DOM, so it is automatically excluded from both `total` and `read` counts. The orphaned localStorage key is harmless.
+
+**Resetting read state** (e.g. for testing): in DevTools console:
+```javascript
+Object.keys(localStorage).filter(k => k.startsWith('post_read_')).forEach(k => localStorage.removeItem(k))
+```
+
 ### Press materials
 
 `_posts/YYYY-MM-DD-pressematerial.md` lists all downloadable assets for journalists and social media. Structure:
@@ -201,13 +234,17 @@ Create `_posts/YYYY-MM-DD-slug.md`:
 ---
 title: "Dein Titel"
 date: 2026-05-01
+uuid: <uuid-v4>                                              # required — generate with: uuidgen | tr '[:upper:]' '[:lower:]'
 social_media_preview_image: /assets/images/og-my-post.jpg   # optional
 ---
 
 Inhalt hier …
 ```
 
-The post appears automatically in the "Neuigkeiten" section on the home page. If the post has a hero image, generate a 1200×630 OG crop (see above) and set `social_media_preview_image`.
+The post appears automatically in the "Neuigkeiten" section on the home page.
+
+- `uuid` is **required** for read tracking — without it the post won't get a read indicator or count toward the progress bar
+- If the post has a hero image, generate a 1200×630 OG crop (see above) and set `social_media_preview_image`
 
 ---
 
