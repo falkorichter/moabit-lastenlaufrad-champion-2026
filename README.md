@@ -218,7 +218,9 @@ Posts are tracked client-side using `localStorage` — no server, no cookies, no
 Object.keys(localStorage).filter(k => k.startsWith('post_read_')).forEach(k => localStorage.removeItem(k))
 ```
 
-**Privacy**: this tracking is intentionally local-only and requires no consent notice:
+#### Privacy
+
+This tracking is intentionally local-only and requires no consent notice:
 - Nothing is transmitted — data never leaves the visitor's browser
 - No server, no analytics service, no third party involved
 - Only a boolean flag per post UUID is stored — no timestamps, no IP, no identity
