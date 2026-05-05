@@ -228,6 +228,25 @@ This tracking is intentionally local-only and requires no consent notice:
 - Visitors can clear their read state at any time via browser settings (Clear site data)
 - DSGVO/GDPR: local storage used purely for UI state (like remembering a toggle) does not require consent under current guidance — no personal data is processed or transmitted
 
+### Embedding video (autoplay loop)
+
+Videos are stored in `assets/videos/` as MP4 (H.264) + WebM (VP9) and embedded with a `<video>` tag. `muted` is required for autoplay to work across all browsers; `playsinline` prevents iOS from going full-screen.
+
+```html
+<video autoplay loop muted playsinline style="width:100%;height:auto;border-radius:12px;margin-top:1.2rem;">
+  <source src="/assets/videos/my-clip.webm" type="video/webm">
+  <source src="/assets/videos/my-clip.mp4"  type="video/mp4">
+</video>
+```
+
+**Converting a new video** — use `_logo/convert_video.py` (requires `ffmpeg`):
+
+```bash
+python3 _logo/convert_video.py /path/to/source.mp4 my-clip
+```
+
+This scales the video to max 780px wide, re-encodes to H.264 MP4 (faststart) and VP9 WebM, strips audio, and prints the HTML snippet to paste into a post.
+
 ### Press materials
 
 `_posts/YYYY-MM-DD-pressematerial.md` lists all downloadable assets for journalists and social media. Structure:
