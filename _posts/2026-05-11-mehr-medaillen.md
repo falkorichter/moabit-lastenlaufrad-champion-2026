@@ -1,5 +1,5 @@
 ---
-title: "Mehr Medailien"
+title: "Mehr Medaillen"
 date: 2026-05-11
 uuid: 93c4b7a8-d48b-4d1b-8768-b5f226256eca
 social_media_preview_image: /assets/images/og-medaillen.jpg
@@ -20,4 +20,4 @@ social_media_preview_image: /assets/images/og-medaillen.jpg
   >
 </picture>
 
-Vielen Dank fur das tolle Event und die vielen Lastenlaufradrenner:innen. Wir produzieren noch einige Medalien, die gibt es dann im Zazza abzuholen. Wir geben euch Besheid, wenn sie fertig sind
+Vielen Dank fur das tolle Event und die vielen Lastenlaufradrenner:innen. Wir produzieren noch einige Medaillen, die gibt es dann im Zazza abzuholen. Wir geben euch Besheid, wenn sie fertig sind. Schaut hier in den Blog Post in den nächsten Tagen einfach nochmal rein ❤️❤️❤️.
