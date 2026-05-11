@@ -1,6 +1,6 @@
 _site/
 .DS_Store
 .env
-*.csv
+submissions.csv
 *.pxd
 Gemfile.lock
