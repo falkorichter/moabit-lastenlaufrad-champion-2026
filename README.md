@@ -76,6 +76,73 @@ No backend needed. The form posts to `https://formsubmit.co/<hash>`. On success 
 
 Fields: name (required), email (required), phone (`type="tel"`, optional), class dropdown (required), free-text message (optional), DSGVO consent checkbox (required).
 
+**Re-opening the form**: replace the closed-state section in `index.html` with the code below, inside `<section id="anmeldung">`:
+
+```html
+<div class="reg-section">
+  <h2>Anmeldung</h2>
+  <p class="note">
+    Meldet euch hier an – wir schicken euch alle Infos zum Rennablauf.
+    Startnummern gibt es am Tag vor Ort.
+  </p>
+
+  <form
+    action="https://formsubmit.co/2c8b381f690bbe6bcf6b8c3687e6a5a8"
+    method="POST"
+  >
+    <input type="hidden" name="_subject" value="Anmeldung Moabiter Lastenlaufrad Kiez-WM 2026">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_autoresponse" value="Danke für deine Anmeldung zur Moabiter Lastenlaufrad Kiez-WM! Wir melden uns mit allen Details. Bis zum 9. Mai!">
+    <input type="hidden" name="_next" value="https://moabit.pimpmycargo.bike/?danke=1">
+
+    <div class="field">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Dein Name" required>
+    </div>
+
+    <div class="field">
+      <label for="email">E-Mail</label>
+      <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+    </div>
+
+    <div class="field">
+      <label for="phone">Telefon (optional)</label>
+      <input type="tel" id="phone" name="phone" placeholder="+49 30 …">
+    </div>
+
+    <div class="field">
+      <label for="klasse">Klasse</label>
+      <div class="klasse-wrap">
+        <img id="klasse-icon" class="klasse-icon" src="" alt="" hidden aria-hidden="true">
+        <select id="klasse" name="klasse" required>
+          <option value="" disabled selected>Klasse wählen …</option>
+          <option value="Kindergarten (Pro)">Kindergarten – Die Pros</option>
+          <option value="Grundschule (Lauf-Boomer)">Grundschule – Lauf-Boomer</option>
+          <option value="Erwachsene (Oldie)">Erwachsene – Oldies</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="message">Fragen oder Anmerkungen</label>
+      <textarea id="message" name="message" placeholder="Fragen, Wünsche, spezielle Frachten?" rows="3"></textarea>
+    </div>
+
+    <div class="field field-consent">
+      <label class="consent-label">
+        <input type="checkbox" name="datenschutz" value="zugestimmt" required>
+        Helm nicht vergessen! Ich bin kein Bot und stimme zu, dass meine Daten mit formsubmit.co verschickt werden. Automatische Löschung nach 30 Tagen. Fotoerlaubnis machen wir vor Ort persönlich.
+      </label>
+    </div>
+
+    <button type="submit" class="btn-submit">
+      <img src="{{ '/assets/images/junior-logo.svg' | relative_url }}" alt="" class="btn-logo" aria-hidden="true">
+      Jetzt anmelden
+    </button>
+  </form>
+</div>
+```
+
 **Fetching submissions** (max 5×/day, auto-deleted after 30 days):
 
 ```bash
