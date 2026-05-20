@@ -39,3 +39,18 @@ Vielen Dank fur das tolle Event und die vielen Lastenlaufradrenner:innen. Wir pr
     style="width:100%;height:auto;border-radius:12px;margin-bottom:1.2rem;"
   >
 </picture>
+
+<picture>
+  <source type="image/webp"
+    srcset="/assets/images/medaillen-pokal-780w.webp 780w,
+            /assets/images/medaillen-pokal-1560w.webp 1560w"
+    sizes="min(92vw, 780px)">
+  <img
+    src="/assets/images/medaillen-pokal-780w.jpg"
+    srcset="/assets/images/medaillen-pokal-780w.jpg 780w,
+            /assets/images/medaillen-pokal-1560w.jpg 1560w"
+    sizes="min(92vw, 780px)"
+    alt="Pokal und Medaillen der Kiez-WM 2026 im Zazza"
+    style="width:100%;height:auto;border-radius:12px;margin-bottom:1.2rem;"
+  >
+</picture>
